@@ -6,7 +6,8 @@
   "required": true,
   "target": "@env(DEFAULT)",
   "mixins": [
-    "TeslaCoreLibElectricTileEntityMixin"
+    "TeslaCoreLibElectricTileEntityMixin",
+    "TeslaCoreLibEnergyStorageMixin"
   ],
   "client": [],
   "server": []
