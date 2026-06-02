@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
         dependencies = RFIOunLimiter.DEPENDENCIES
 )
 public class RFIOunLimiter {
-    public static final String MODID = "RFIOunLimiter";
+    public static final String MODID = "rfiounlimiter";
     public static final String NAME = "RF I/O unLimiter";
     public static final String VERSION = "GRADLETOKEN_VERSION";
     public static final String DEPENDENCIES = "required-after:mixinbooter;";

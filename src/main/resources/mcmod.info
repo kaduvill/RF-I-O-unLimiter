@@ -1,6 +1,6 @@
 [
   {
-    "modid": "RFIOunLimiter",
+    "modid": "rfiounlimiter",
     "name": "RF I/O unLimiter",
     "description": "Remove RF I/O Limits for various mods.",
     "version": "${version}",

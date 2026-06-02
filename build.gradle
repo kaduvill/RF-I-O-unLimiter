@@ -14,7 +14,7 @@ if (System.getenv('BUILD_NUMBER') != null) {
 }
 
 base {
-    archivesName.set('RFIOunLimiter')
+    archivesName.set('rfiounlimiter')
 }
 
 tasks.withType(JavaCompile).configureEach {
