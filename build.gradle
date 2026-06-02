@@ -52,7 +52,7 @@ minecraft {
     extraRunJvmArguments.add('-Dmixin.checks.interfaces=true')
     extraRunJvmArguments.add('-Dmixin.debug.export=true')
 
-    tagReplacementFiles.add('CapnsChiselSearch.java')
+    tagReplacementFiles.add('RFIOunLimiter.java')
     injectedTags.put('GRADLETOKEN_VERSION', project.version.toString())
 }
 
@@ -103,6 +103,10 @@ dependencies {
     }
 
     //dependencies
+    compileOnly(rfg.deobf("curse.maven:bdlib-70496:4675629")) {
+        transitive = false
+    }
+
 }
 
 processResources {

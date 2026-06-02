@@ -4,9 +4,13 @@ import net.minecraftforge.common.config.Config;
 
 @Config(modid = RFIOunLimiter.MODID, name = "RF_IO_unLimiter")
 public class RFIOunLimiterConfig {
-    @Config.Name("Enable Gendustry (BdLib) unlimiter")
+
+    //Mixins are guarded behind mod.loaded AND config-boolean
+
+    @Config.Name("Enable BDLib unlimiter")
     @Config.Comment({
-            "unlimits RF I/O for all BDlib mods"
+            "Runtime-only patch for BDLib machines, (Gendustry).",
+            "When enabled, BDLib machine maxReceive is raised to at least its internal energy capacity.",
     })
-    public static boolean enableXXXplaceholderUnlimiter = true;
+    public static boolean enableBdLibUnlimiter = true;
 }
