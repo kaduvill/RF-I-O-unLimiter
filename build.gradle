@@ -106,6 +106,10 @@ dependencies {
     compileOnly(rfg.deobf("curse.maven:bdlib-70496:4675629")) {
         transitive = false
     }
+    compileOnly(rfg.deobf("curse.maven:tesla-core-lib-254602:3438487")) {
+        transitive = false
+    }
+
 
 }
 

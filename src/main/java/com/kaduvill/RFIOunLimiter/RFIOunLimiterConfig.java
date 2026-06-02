@@ -10,7 +10,15 @@ public class RFIOunLimiterConfig {
     @Config.Name("Enable BDLib unlimiter")
     @Config.Comment({
             "Runtime-only patch for BDLib machines, (Gendustry).",
-            "When enabled, BDLib machine maxReceive is raised to at least its internal energy capacity.",
+            "When enabled, maxReceive is raised to its internal energy capacity.",
     })
     public static boolean enableBdLibUnlimiter = true;
+
+    @Config.Name("Enable Tesla Core Lib unlimiter")
+    @Config.Comment({
+            "Patch for all Tesla Core Lib ElectricTileEntity. (Industrial Foregoing)",
+            "When enabled, maxReceive is raised toleast its internal energy capacity.",
+    })
+    public static boolean enableTeslaCoreLibUnlimiter = true;
+
 }

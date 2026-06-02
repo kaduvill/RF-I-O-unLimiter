@@ -1,6 +1,7 @@
 package com.kaduvill.RFIOunLimiter.mixin;
 
 import com.kaduvill.RFIOunLimiter.RFIOunLimiterConfig;
+import net.bdew.lib.power.DataSlotPower;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -8,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.Coerce;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(targets = "net.bdew.lib.power.DataSlotPower", remap = false)
+@Mixin(value = DataSlotPower.class, remap = false)
 public abstract class BdLibDataSlotPowerMixin {
 
     @Shadow

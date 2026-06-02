@@ -17,7 +17,7 @@ public class RFIOunLimiter {
     public static final String MODID = "rfiounlimiter";
     public static final String NAME = "RF I/O unLimiter";
     public static final String VERSION = "GRADLETOKEN_VERSION";
-    public static final String DEPENDENCIES = "required-after:mixinbooter;";
+    public static final String DEPENDENCIES = "required-after:mixinbooter;after:bdlib;after:teslacorelib;";
 
     public static final Logger LOGGER = LogManager.getLogger(NAME);
 
