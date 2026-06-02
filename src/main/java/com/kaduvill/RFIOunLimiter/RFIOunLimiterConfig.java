@@ -17,8 +17,16 @@ public class RFIOunLimiterConfig {
     @Config.Name("Enable Tesla Core Lib unlimiter")
     @Config.Comment({
             "Patch for all Tesla Core Lib ElectricTileEntity. (Industrial Foregoing)",
-            "When enabled, maxReceive is raised toleast its internal energy capacity.",
+            "When enabled, maxReceive is raised to at least its internal energy capacity.",
     })
     public static boolean enableTeslaCoreLibUnlimiter = true;
+
+    @Config.Name("Enable Thermal Expansion machine unlimiter")
+    @Config.Comment({
+            "Runtime-only patch for Thermal Expansion machines.",
+            "When enabled, maxReceive is raised to at least its internal energy capacity.",
+            "Only machine input is changed. This does not touch dynamos, energy cells, storage blocks, cables, or maxExtract."
+    })
+    public static boolean enableThermalExpansionMachineUnlimiter = true;
 
 }
