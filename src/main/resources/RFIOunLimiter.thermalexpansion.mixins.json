@@ -6,6 +6,7 @@
   "required": true,
   "target": "@env(DEFAULT)",
   "mixins": [
+    "CoFHTilePoweredAccessor",
     "ThermalExpansionTileMachineBaseMixin"
   ],
   "client": [],

@@ -3,7 +3,6 @@ package com.kaduvill.RFIOunLimiter.mixin;
 import cofh.redstoneflux.impl.EnergyStorage;
 import com.kaduvill.RFIOunLimiter.RFIOunLimiterConfig;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -11,9 +10,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(targets = "cofh.thermalexpansion.block.machine.TileMachineBase", remap = false)
 public abstract class ThermalExpansionTileMachineBaseMixin {
-
-    @Shadow
-    protected EnergyStorage energyStorage;
 
     @Inject(method = "<init>", at = @At("RETURN"), remap = false)
     private void rfiounlimiter$afterConstruct(CallbackInfo ci) {
@@ -37,15 +33,18 @@ public abstract class ThermalExpansionTileMachineBaseMixin {
             return;
         }
 
-        if (this.energyStorage == null) {
+        EnergyStorage energyStorage =
+                ((CoFHTilePoweredAccessor) (Object) this).rfiounlimiter$getEnergyStorage();
+
+        if (energyStorage == null) {
             return;
         }
 
-        int capacity = this.energyStorage.getMaxEnergyStored();
-        int currentMaxReceive = this.energyStorage.getMaxReceive();
+        int capacity = energyStorage.getMaxEnergyStored();
+        int currentMaxReceive = energyStorage.getMaxReceive();
 
         if (capacity > currentMaxReceive) {
-            this.energyStorage.setMaxReceive(capacity);
+            energyStorage.setMaxReceive(capacity);
         }
     }
 }
