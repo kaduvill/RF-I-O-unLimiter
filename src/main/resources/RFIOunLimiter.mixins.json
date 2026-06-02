@@ -1,0 +1,11 @@
+{
+  "package": "com.kaduvill.RFIOunLimiter.mixin",
+  "refmap": "RFIOunLimiter.refmap.json",
+  "minVersion": "0.8",
+  "compatibilityLevel": "JAVA_8",
+  "required": true,
+  "target": "@env(DEFAULT)",
+  "mixins": [],
+  "client": [],
+  "server": []
+}

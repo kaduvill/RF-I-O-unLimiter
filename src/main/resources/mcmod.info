@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "RFIOunLimiter",
+    "name": "RF I/O unLimiter",
+    "description": "Remove RF I/O Limits for various mods.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "authorList": [
+      "kaduvill"
+    ],
+    "dependencies": [
+      "mixinbooter"
+    ]
+  }
+]
